@@ -4,3 +4,36 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+header {
+    height: 12vh;
+}
+
+header img {
+    width: 85px;
+    aspect-ratio: 1;
+}
+
+main {
+    background-color: #7fffd4;
+    height: 80vh;
+}
+
+footer {
+    height: 8vh;
+}
+
+div.container {
+    width: 75%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
