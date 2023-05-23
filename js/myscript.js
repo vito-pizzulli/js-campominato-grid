@@ -11,7 +11,6 @@ playButton.addEventListener('click', function () {
         gridWrapper.appendChild(gridCell);
     }
 
-    const gridCell = createDiv();
     gridCell.classList.add('grid-cell');
     gridWrapper.appendChild(gridCell);
 })
