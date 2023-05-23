@@ -10,7 +10,7 @@ header {
 }
 
 header img {
-    width: 85px;
+    width: 80px;
     aspect-ratio: 1;
 }
 
@@ -32,7 +32,22 @@ div.container {
     align-items: center;
 }
 
-.d-flex {
+div.grid-wrapper {
+    width: 500px;
+    height: 500px;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+div.grid-cell {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    border: 1px solid black;
+    text-align: center;
+    line-height: calc(500px / 10);
+}
+
+.d-flex-centered {
     display: flex;
     justify-content: center;
     align-items: center;
