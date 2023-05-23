@@ -26,7 +26,7 @@ playButton.addEventListener('click', function () {
 /* FUNCTIONS */
 
 /**
- * this function generates a set number of empty divs inside a container, applies 2 css classes to them, plus an additional class that is applied only when clicking on the div.
+ * This function generates a set number of empty divs inside a container, applies 2 css classes to them, plus an additional class that is applied only when clicking on the div.
  * @param {*} divNumber The number of the divs you want to generate.
  * @param {*} firstClass The name of the first class that will be added to the created div.
  * @param {*} secondClass The name of the second class that will be added to the created div.
