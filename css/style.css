@@ -13,6 +13,7 @@ body {
 
 header {
     height: 12vh;
+    overflow-y: auto;
 }
 
 header img {
@@ -23,11 +24,13 @@ header img {
 main {
     background-color: #7fffd4;
     height: 80vh;
+    overflow-y: auto;
 }
 
 footer {
     height: 8vh;
     padding: 1rem;
+    overflow-y: auto;
 }
 
 select,
