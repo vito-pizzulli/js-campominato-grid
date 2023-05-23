@@ -33,8 +33,8 @@ div.container {
 }
 
 div.grid-wrapper {
-    width: 500px;
-    height: 500px;
+    width: 550px;
+    height: 550px;
     flex-wrap: wrap;
     margin: auto;
 }
@@ -51,4 +51,8 @@ div.grid-cell {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.black-border {
+    border: 1px solid black;
 }
