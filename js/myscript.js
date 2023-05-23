@@ -1,13 +1,12 @@
 const playButton = document.querySelector('button');
 const gridWrapper = document.querySelector('div.grid-wrapper');
-let gridCell;
 
 playButton.addEventListener('click', function () {
     gridWrapper.innerHTML = ' ';
     gridWrapper.classList.add('black-border')
 
     for (let i = 1; i <= 100; i++) {
-        gridCell = createDiv();
+        const gridCell = createDiv();
         gridCell.innerHTML = [i];
         gridCell.classList.add('grid-cell');
 
