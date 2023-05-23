@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Arial', sans-serif;
+    user-select: none;
+}
+
 header {
     height: 12vh;
 }
@@ -17,10 +22,25 @@ header img {
 main {
     background-color: #7fffd4;
     height: 80vh;
+    font-size: 1.3rem;
 }
 
 footer {
     height: 8vh;
+}
+
+button {
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    background-color: #4d84ff;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    transition: all .3s;
+}
+
+button:hover {
+    background-color: #729fff;
 }
 
 div.container {
