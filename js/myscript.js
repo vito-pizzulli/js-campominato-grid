@@ -9,15 +9,15 @@ playButton.addEventListener('click', function () {
 
     if (difficulty == 1) {
 
-        cellGenerator (100, 'grid-cell', 'difficulty-1-cell-width', 'clicked-cell', gridWrapper);
+        divGenerator (100, 'grid-cell', 'difficulty-1-cell-width', 'clicked-cell', gridWrapper);
 
     } else if (difficulty == 2) {
 
-        cellGenerator (81, 'grid-cell', 'difficulty-2-cell-width', 'clicked-cell', gridWrapper);
+        divGenerator (81, 'grid-cell', 'difficulty-2-cell-width', 'clicked-cell', gridWrapper);
 
     } else {
 
-        cellGenerator (49, 'grid-cell', 'difficulty-3-cell-width', 'clicked-cell', gridWrapper);
+        divGenerator (49, 'grid-cell', 'difficulty-3-cell-width', 'clicked-cell', gridWrapper);
 
     }
 })
@@ -26,14 +26,14 @@ playButton.addEventListener('click', function () {
 /* FUNCTIONS */
 
 /**
- * This function generates a set number of empty divs inside a container, applies 2 css classes to them, plus an additional class that is applied only when clicking on the div.
+ * This function generates a set number of empty divs inside a container, applies 2 css classes to them, plus an additional class that is applied only when clicking on the div. The index (i) number will be added inside each div, from 1 to the last one. When clicking a div, the index (i) number will be printed into the console.
  * @param {*} divNumber The number of the divs you want to generate.
  * @param {*} firstClass The name of the first class that will be added to the created div.
  * @param {*} secondClass The name of the second class that will be added to the created div.
  * @param {*} clickClass The name of the class that will be added to the div only when clicking on him.
  * @param {*} divContainer The container inside which the divs will be created.
  */
-function cellGenerator (divNumber, firstClass, secondClass, clickClass, divContainer) {
+function divGenerator (divNumber, firstClass, secondClass, clickClass, divContainer) {
 
     for (let i = 1; i <= divNumber; i++) {
             const cell = document.createElement('div');
