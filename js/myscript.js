@@ -4,19 +4,21 @@ let gridCell;
 
 playButton.addEventListener('click', function () {
     gridWrapper.innerHTML = ' ';
+    gridWrapper.classList.add('black-border')
 
     for (let i = 1; i <= 100; i++) {
         gridCell = createDiv();
         gridCell.innerHTML = [i];
         gridCell.classList.add('grid-cell');
+
+        gridCell.addEventListener('click', function () {
+            gridCell.classList.toggle('clicked-cell');
+            console.log("Hai cliccato la cella n° " + [i])
+        })
+
         gridWrapper.appendChild(gridCell);
     }
-
-    gridWrapper.classList.add('black-border')
-    gridCell.classList.add('grid-cell');
-    gridWrapper.appendChild(gridCell);
 })
-
 
 /* FUNCTIONS */
 

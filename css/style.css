@@ -56,3 +56,8 @@ div.grid-cell {
 .black-border {
     border: 1px solid black;
 }
+
+.clicked-cell {
+    background-color: #4d84ff;
+    color: white;
+}
