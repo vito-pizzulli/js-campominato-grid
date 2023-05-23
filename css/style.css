@@ -74,12 +74,12 @@ div.grid-wrapper {
     width: 700px;
     height: 700px;
     flex-wrap: wrap;
-    margin: auto;
 }
 
 div.grid-cell {
     border: 1px solid black;
     text-align: center;
+    transition: all .5s;
 }
 
 .d-flex-centered {
