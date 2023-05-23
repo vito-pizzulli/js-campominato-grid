@@ -11,7 +11,7 @@ playButton.addEventListener('click', function () {
         gridCell.classList.add('grid-cell');
 
         gridCell.addEventListener('click', function () {
-            gridCell.classList.toggle('clicked-cell');
+            gridCell.classList.add('clicked-cell');
             console.log("Hai cliccato la cella n° " + [i])
         })
 
