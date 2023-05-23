@@ -60,11 +60,8 @@ div.grid-wrapper {
 }
 
 div.grid-cell {
-    width: calc(100% / 10);
-    height: calc(100% / 10);
     border: 1px solid black;
     text-align: center;
-    line-height: calc(500px / 10);
 }
 
 .d-flex-centered {
@@ -80,4 +77,22 @@ div.grid-cell {
 .clicked-cell {
     background-color: #4d84ff;
     color: white;
+}
+
+.difficulty-1-cell-width {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    line-height: calc(500px / 10);
+}
+
+.difficulty-2-cell-width {
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+    line-height: calc(500px / 9);
+}
+
+.difficulty-3-cell-width {
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+    line-height: calc(500px / 7);
 }
