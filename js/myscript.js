@@ -9,56 +9,42 @@ playButton.addEventListener('click', function () {
 
     if (difficulty == 1) {
 
-        for (let i = 1; i <= 100; i++) {
-            const gridCell = createDiv('grid-cell', 'difficulty-1-cell-width');
-            gridCell.innerHTML = [i];
-            
-            gridCell.addEventListener('click', function () {
-                gridCell.classList.add('clicked-cell');
-                console.log("Hai cliccato la cella n° " + [i])
-            })
-            
-            gridWrapper.appendChild(gridCell);
-        }
+        cellGenerator (100, 'grid-cell', 'difficulty-1-cell-width', 'clicked-cell', gridWrapper);
+
     } else if (difficulty == 2) {
 
-        for (let i = 1; i <= 81; i++) {
-            const gridCell = createDiv('grid-cell', 'difficulty-2-cell-width');
-            gridCell.innerHTML = [i];
-            
-            gridCell.addEventListener('click', function () {
-                gridCell.classList.add('clicked-cell');
-                console.log("Hai cliccato la cella n° " + [i])
-            })
-            
-            gridWrapper.appendChild(gridCell);
-        }
+        cellGenerator (81, 'grid-cell', 'difficulty-2-cell-width', 'clicked-cell', gridWrapper);
+
     } else {
 
-        for (let i = 1; i <= 49; i++) {
-            const gridCell = createDiv('grid-cell', 'difficulty-3-cell-width');
-            gridCell.innerHTML = [i];
-            
-            gridCell.addEventListener('click', function () {
-                gridCell.classList.add('clicked-cell');
-                console.log("Hai cliccato la cella n° " + [i])
-            })
-            
-            gridWrapper.appendChild(gridCell);
-        }
+        cellGenerator (49, 'grid-cell', 'difficulty-3-cell-width', 'clicked-cell', gridWrapper);
+
     }
 })
+
 
 /* FUNCTIONS */
 
 /**
- * This function creates an empty div in html with two css classes.
- * @param {*} firstClass The first css class that the div will have.
- * @param {*} secondClass The second css class that the div will have.
- * @returns An empty div with two classes.
+ * this function generates a set number of empty divs inside a container, applies 2 css classes to them, plus an additional class that is applied only when clicking on the div.
+ * @param {*} divNumber The number of the divs you want to generate.
+ * @param {*} firstClass The name of the first class that will be added to the created div.
+ * @param {*} secondClass The name of the second class that will be added to the created div.
+ * @param {*} clickClass The name of the class that will be added to the div only when clicking on him.
+ * @param {*} divContainer The container inside which the divs will be created.
  */
-function createDiv (firstClass, secondClass) {
-    const div = document.createElement('div');
-    div.classList.add(firstClass, secondClass);
-    return div;
+function cellGenerator (divNumber, firstClass, secondClass, clickClass, divContainer) {
+
+    for (let i = 1; i <= divNumber; i++) {
+            const cell = document.createElement('div');
+            cell.innerHTML = [i];
+            cell.classList.add(firstClass, secondClass);
+            
+            cell.addEventListener('click', function () {
+                cell.classList.add(clickClass);
+                console.log("Hai cliccato la cella n° " + [i])
+            })
+            
+            divContainer.appendChild(cell);
+        }
 }
