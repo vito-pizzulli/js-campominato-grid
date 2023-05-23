@@ -39,22 +39,18 @@ button {
     cursor: pointer;
     border-radius: 20px;
     border: none;
-    transition: all .3s;
     font-size: 1.3rem;
+    color: white;
 }
 
 select {
-    background-color: #00e165;
+    background-color: #00cd5c;
     margin: .5rem 0;
-}
-
-select:hover {
-    background-color: #71fcaf;
 }
 
 button {
     background-color: #4d84ff;
-    color: white;
+    transition: all .3s;
 }
 
 button:hover {
