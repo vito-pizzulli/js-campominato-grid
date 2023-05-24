@@ -5,7 +5,9 @@ const playButtonAudio= document.getElementById('audio');
 
 playButton.addEventListener('click', function () {
     
-    playButtonAudio.play()
+    
+    playButtonAudio.load();
+    playButtonAudio.play();
     gridWrapper.innerHTML = ' ';
     gridWrapper.classList.add('black-border')
     difficulty = difficultySelect.value;
