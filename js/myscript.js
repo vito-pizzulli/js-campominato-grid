@@ -27,12 +27,12 @@ playButton.addEventListener('click', function () {
 /* FUNCTIONS */
 
 /**
- * This function generates a set number of empty divs inside a container, applies 2 css classes to them, plus an additional class that is applied only when clicking on the div. The index (i) number will be added inside each div, from 1 to the last one. When clicking a div, the index (i) number will be printed into the console.
+ * This function generates a set number of empty divs inside a container, applies 2 css classes to them, plus an additional class that is applied only when clicking on the div. The index (i) number will be added inside each div, from 1 to the last one. When clicking a div, the index (i) number will be printed into the console and, if it hasn't been already clicked before, it will play a sound.
  * @param {*} divNumber The number of the divs you want to generate.
  * @param {*} firstClass The name of the first class that will be added to the created div.
  * @param {*} secondClass The name of the second class that will be added to the created div.
  * @param {*} clickClass The name of the class that will be added to the div only when clicking on him.
- * * @param {*} clickSound The sound that will be played when clicking a div.
+ * * @param {*} clickSound The sound that will be played when clicking a div that has not already been clicked.
  *  * @param {*} divContainer The container inside which the divs will be created.
  */
 function divGenerator (divNumber, firstClass, secondClass, clickClass, clickSound, divContainer) {
@@ -42,9 +42,13 @@ function divGenerator (divNumber, firstClass, secondClass, clickClass, clickSoun
             cell.innerHTML = [i];
             cell.classList.add(firstClass, secondClass);
             
-            cell.addEventListener('click', function () { 
-                clickSound.load();
-                clickSound.play();
+            cell.addEventListener('click', function () {
+
+                if (!cell.classList.contains(clickClass)) {
+                    clickSound.load();
+                    clickSound.play();
+                }
+
                 cell.classList.add(clickClass);
                 console.log("Hai cliccato la cella n° " + [i])
             })
