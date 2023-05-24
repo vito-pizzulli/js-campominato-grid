@@ -1,11 +1,11 @@
 const playButton = document.querySelector('button');
 const gridWrapper = document.querySelector('div.grid-wrapper');
 const difficultySelect = document.querySelector('select');
-const myAudio = document.getElementById('audio');
+const playButtonAudio= document.getElementById('audio');
 
 playButton.addEventListener('click', function () {
     
-    myAudio.play()
+    playButtonAudio.play()
     gridWrapper.innerHTML = ' ';
     gridWrapper.classList.add('black-border')
     difficulty = difficultySelect.value;
