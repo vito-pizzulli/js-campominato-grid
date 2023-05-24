@@ -1,10 +1,9 @@
 const playButton = document.querySelector('button');
 const gridWrapper = document.querySelector('div.grid-wrapper');
 const difficultySelect = document.querySelector('select');
-const playButtonAudio= document.getElementById('audio');
+const playButtonAudio = document.getElementById('audio');
 
 playButton.addEventListener('click', function () {
-    
     
     playButtonAudio.load();
     playButtonAudio.play();
@@ -13,17 +12,13 @@ playButton.addEventListener('click', function () {
     difficulty = difficultySelect.value;
 
     if (difficulty == 1) {
-
         divGenerator (100, 'grid-cell', 'difficulty-1-cell-width', 'clicked-cell', gridWrapper);
 
     } else if (difficulty == 2) {
-
         divGenerator (81, 'grid-cell', 'difficulty-2-cell-width', 'clicked-cell', gridWrapper);
 
     } else {
-
         divGenerator (49, 'grid-cell', 'difficulty-3-cell-width', 'clicked-cell', gridWrapper);
-
     }
 })
 
@@ -49,7 +44,6 @@ function divGenerator (divNumber, firstClass, secondClass, clickClass, divContai
                 cell.classList.add(clickClass);
                 console.log("Hai cliccato la cella n° " + [i])
             })
-            
             divContainer.appendChild(cell);
         }
 }
